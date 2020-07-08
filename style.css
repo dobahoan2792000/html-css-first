@@ -219,7 +219,7 @@ body{
 .course:hover .nav-hide{
     display: block;
 }
-.fa-chevron-down{
+.kh i{
     color: black;
     opacity: 0.6;
     font-size: 10px;
