@@ -7,23 +7,22 @@
 }
 html{
     width: 100%;
-    height: 100%;
+
+    
 }
 body{
     width: 100%;
-    height: 100%;
-   
+    background-image: url("http://online.khoapham.vn/online/images/pexels-photo.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
 }
 .container{
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    background-image: url("http://online.khoapham.vn/online/images/pexels-photo.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
     /* align-items: center; */
-    
 }
 .nav{
     width:100%;
@@ -32,6 +31,7 @@ body{
     position: sticky;
     top: 0;
     z-index: 1;
+    
     
 }
 .nav ul{
@@ -60,28 +60,27 @@ body{
     line-height: 70px;
     
 }
-.active:hover{
+.ul-bar li:hover .active{
     color:red;
 }
 .main{
     width:100%;
     display:flex;
     justify-content : center;
-    position: absolute;
+    margin-top: 100px;
+    /* position: absolute;
     top:55%;
     left:50%;
-    transform: translate(-50%,-50%);
-
+    transform: translate(-50%,-50%); */
 }
 .box-big{
     width: 60%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background:rgba(0,0,0,0.5);
-    margin-top: 1.125em;
+    /* margin-top: 1.125em; */
 }
 /* gioi thieu */
 .introduce{
@@ -101,12 +100,13 @@ body{
     font-weight: lighter;
     text-align: center !important;
     opacity: 0.9;
-}.introduce p{
+}
+.introduce p{
     font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+    /* font-weight: 300; */
     font-size: 1.125em;
     word-spacing: 1px;
-    line-height: 1.5em;
+    /* line-height: 1.5em; */
     width: 85%;
     text-align: center;
     font-weight: 550;
@@ -153,7 +153,7 @@ body{
 /* 3box */
 .box3{
     width: 80% !important;
-    height: 50%;
+    
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -163,7 +163,7 @@ body{
 .box{
     
     width: 30% ;
-    height: 80% ;
+    
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -172,11 +172,12 @@ body{
     letter-spacing: 0.08125em;
     font-size: 0.9375em;
     padding-top: 0.1875em;
-    padding-bottom: 2.5em;
+    padding-bottom: 2em;
 }
 .box i{
     font-size: 2em;
     margin-right: 0.5em;
+    line-height: 1.2em;
 }
 .checkbtn i{
     color: black;
@@ -190,6 +191,31 @@ body{
 #check{
     display: none;
 }
+.nav-hide{
+    position: absolute;
+    display: none;
+    transition: .5s ease-in;
+}
+.sub-list{
+    background-color: #EEEEEE;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0px !important;
+    justify-content: center;
+    align-items: center;
+}
+.sub-list li{
+    width: 100%;
+    color: black;
+    font-family: 'Roboto Condensed', sans-serif;
+    opacity: 0.6;
+    border-top: 1px solid #e3e3e3;
+    height: 50px;
+    line-height: 50px;
+}
+.course:hover .nav-hide{
+    display: block;
+}
 @media screen and (max-width : 900px)
 {
     .box-big{
@@ -197,7 +223,7 @@ body{
     }
     .box3{
     width: 100%;
-    height:100%;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -206,7 +232,6 @@ body{
     }
     .box{
         width: 90%;
-        height: 100%;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -218,9 +243,8 @@ body{
     .ul-bar{
        position: fixed;
        width: 100%;
-       height: 200px;
        background-color: white;
-       top: 70px;
+       top: 69px;
        left: 100%;
        text-align: center;
        transition: all .5s; 
@@ -235,16 +259,28 @@ body{
     }
     #check:checked ~ ul{
         left:0;
+        background-color: #e3e3e3;
+
     }
-    
+    .nav-hide{
+        position: relative !important;
+       
+    }
+    .sub-list{
+        background-color: #e3e3e3;
+    }
+    .course{
+        padding: 0px !important;
+    }
     
 }
 @media screen and (max-width : 400px)
 {
-    .box-big{
-        height: 80%;
+    
+    .introduce h2{
+        font-size: 1.8em;
     }
-    .box3{
-        padding-bottom: -2em;
+    .introduce p{
+        font-size: 1em;
     }
 }
