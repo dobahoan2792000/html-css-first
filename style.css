@@ -60,9 +60,12 @@ body{
     line-height: 70px;
     
 }
+.active{
+    transition: all .5s;
+}
 .ul-bar li:hover .active{
     color:red;
-}
+}   
 .main{
     width:100%;
     display:flex;
@@ -80,7 +83,6 @@ body{
     justify-content: center;
     align-items: center;
     background:rgba(0,0,0,0.5);
-    /* margin-top: 1.125em; */
 }
 /* gioi thieu */
 .introduce{
@@ -194,7 +196,7 @@ body{
 .nav-hide{
     position: absolute;
     display: none;
-    transition: .5s ease-in;
+   
 }
 .sub-list{
     background-color: #EEEEEE;
@@ -203,6 +205,7 @@ body{
     margin-right: 0px !important;
     justify-content: center;
     align-items: center;
+    transition: all 5s ease-in;
 }
 .sub-list li{
     width: 100%;
@@ -215,6 +218,11 @@ body{
 }
 .course:hover .nav-hide{
     display: block;
+}
+.fa-chevron-down{
+    color: black;
+    opacity: 0.6;
+    font-size: 10px;
 }
 @media screen and (max-width : 900px)
 {
@@ -272,7 +280,12 @@ body{
     .course{
         padding: 0px !important;
     }
-    
+    .seen{
+        display: none !important;
+    }
+    .kh{
+        display: block;
+    }
 }
 @media screen and (max-width : 400px)
 {
@@ -282,5 +295,8 @@ body{
     }
     .introduce p{
         font-size: 1em;
+    }
+    .slick-slide img{
+        margin-left: 0px !important;
     }
 }

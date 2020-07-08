@@ -24,7 +24,9 @@
                     <a href="#" class="active">Trang chủ</a>
                 </li>
                 <li class="course">
-                    <a href="#" class="active">Khóa học</a>
+                    <a href="#" class="active kh" onclick="toggleClick()">Khóa học
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
                     <div class="nav-hide">
                         <ul class="sub-list">
                             <li>PHP</li>
@@ -69,5 +71,20 @@
         </div>
         
     </div>
+    <script type="text/javascript">
+    var getUl = document.querySelector('.sub-list');
+        function toggleClick(){
+
+            if(getUl.classList.contains('seen'))
+            {
+                getUl.classList.remove('seen')
+              
+            }
+            else {
+                getUl.classList.add('seen')
+              
+            }
+        }
+    </script>
 </body>
 </html>
